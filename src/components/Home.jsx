@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Btn from "./btn";
 
@@ -23,7 +24,7 @@ const LogoImg=styled.img`
   border-radius: 50%;
 `
 
-const Home = () => {
+const Home = ({aumentarContador}) => {
   return ( 
   <MydivHome>
     <div>
@@ -33,7 +34,9 @@ const Home = () => {
     <div>
       <img src="https://placeimg.com/200/200/nature" alt="" />
     </div>
-    <Btn text ='comenzar' color='verde' />
+    <Link to="./heroe" onClick={aumentarContador}>
+      <Btn text ='comenzar' color='verde' />
+    </Link>
   </MydivHome> 
   
   );
